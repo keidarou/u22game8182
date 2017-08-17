@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2FBE5A2F-0DEF-181A-F6F7-359EDE6FA3D8}</ProjectGuid>
+    <ProjectGuid>{DB9E613F-7DD6-CCD5-A770-E5AF3BCDFD4F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -70,6 +70,7 @@
      <Compile Include="Assets\scripts\MainGame\tweet.cs" />
      <Compile Include="Assets\scripts\StageSelect\CreateButton.cs" />
      <Compile Include="Assets\scripts\StageSelect\MoveScene.cs" />
+     <Compile Include="Assets\scripts\Title\Config.cs" />
      <Compile Include="Assets\scripts\Title\TitleButton.cs" />
      <Compile Include="Assets\scripts\Title\botanmanager.cs" />
      <Compile Include="Assets\scripts\Title\movetheballfortitle.cs" />
