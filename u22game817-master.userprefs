@@ -1,0 +1,21 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/MainGame/timelimitandmemory.cs">
+    <Files>
+      <File FileName="Assets/scripts/MainGame/share.cs" Line="18" Column="34" />
+      <File FileName="Assets/share/SocialConnector/Sample/Sample.cs" Line="17" Column="35" />
+      <File FileName="Assets/scripts/MainGame/Button1.cs" Line="63" Column="23" />
+      <File FileName="Assets/scripts/MainGame/movetheballautomatic.cs" Line="132" Column="45" />
+      <File FileName="Assets/scripts/touch.cs" Line="62" Column="1" />
+      <File FileName="Assets/scripts/MainGame/automaticgenerator.cs" Line="428" Column="1" />
+      <File FileName="Assets/scripts/MainGame/GetAcc.cs" Line="61" Column="22" />
+      <File FileName="Assets/scripts/MainGame/movetheball.cs" Line="17" Column="5" />
+      <File FileName="Assets/scripts/MainGame/codemaker.cs" Line="86" Column="2" />
+      <File FileName="Assets/scripts/MainGame/timelimitandmemory.cs" Line="136" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
