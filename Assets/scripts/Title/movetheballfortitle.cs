@@ -147,13 +147,13 @@ public class movetheballfortitle : MonoBehaviour
         this.labelStyle.fontSize = Screen.height / 20;
         this.labelStyle.normal.textColor = Color.black;
         Debug.Log("up");
-        Debug.Log(Selectrange(0, -1, nowdownx, nowdowny));
+       // Debug.Log(Selectrange(0, -1, nowdownx, nowdowny));
         Debug.Log("down");
-        Debug.Log(Selectrange(0, 1, nowdownx, nowdowny));
+      //  Debug.Log(Selectrange(0, 1, nowdownx, nowdowny));
         Debug.Log("left");
-        Debug.Log(Selectrange(-1, 0, nowdownx, nowdowny));
+      //  Debug.Log(Selectrange(-1, 0, nowdownx, nowdowny));
         Debug.Log("right");
-        Debug.Log(Selectrange(1, 0, nowdownx, nowdowny));
+     //   Debug.Log(Selectrange(1, 0, nowdownx, nowdowny));
     }
 
     // Update is called once per frame

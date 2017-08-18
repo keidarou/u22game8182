@@ -7,16 +7,20 @@ public class touch : MonoBehaviour {
 	public int ret;
 
 	private float minSwipeDistX;
+    public bool titlegamen;
 	private float minSwipeDistY;
 	Vector2 endPos,startPos;
 	float swipeDistX,swipeDistY;
 	float SignValueX,SignValueY;//方向取得のための符号
+    public GameObject inputfield;
+    inputfieldanimation script;
 	void Start () {
 		minSwipeDistX = 30;//スワイプ判定最小値
 		minSwipeDistY = 30;//スワイプ判定最小値
 		Debug.Log ("left");
+        script = inputfield.GetComponent<inputfieldanimation>();
+        Debug.Log(script);
 	}
-
 	public int GetTouch(){
 		return ret;
 	}
@@ -51,10 +55,23 @@ public class touch : MonoBehaviour {
 					SignValueX = Mathf.Sign (endPos.x - startPos.x);//符号とり
 					if (SignValueX > 0) {
 						ret = 1;
-						Debug.Log ("right");//
+                            if (titlegamen)
+                            {
+                                inputfield.GetComponent<inputfieldanimation>().leftt();
+
+                                GameObject cam = GameObject.Find("buttonadmin");
+                                cam.GetComponent<botanmanager>().leftt();
+                            }
+						//Debug.Log ("right");//
 					} else if (SignValueX < 0) {
-						//ひだりにスワイプ
-						Debug.Log ("left");
+                            //ひだりにスワイプ
+                            if (titlegamen)
+                            {
+                                inputfield.GetComponent<inputfieldanimation>().rightt();
+                                GameObject cam = GameObject.Find("buttonadmin");
+                                cam.GetComponent<botanmanager>().rightt();
+                            }
+                    //        Debug.Log ("left");
 						ret = 2;
 					}
 				} else if (swipeDistY > minSwipeDistY) {//スワイプ距離
@@ -72,6 +89,11 @@ public class touch : MonoBehaviour {
 				}
 				if (swipeDistX < minSwipeDistX && swipeDistY < minSwipeDistY) {
 					Debug.Log ("tap");
+                        if (titlegamen)
+                        {
+                            GameObject cam = GameObject.Find("buttonadmin");
+                            cam.GetComponent<botanmanager>().mannnaka();
+                        }
 					ret = -1;
 					// けっきょくタップ
 				}

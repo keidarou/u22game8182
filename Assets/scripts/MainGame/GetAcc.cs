@@ -10,7 +10,7 @@ public class GetAcc : MonoBehaviour
 	//-----8/17 2:50　追加分
 	public bool ctrlCfg = true;//操作設定:0で画面回転入力,1でフリック
 	public GameObject touch; 
-	touch touchScript;
+	public touch touchScript;
 	int lastTouch;
 
     private Vector3 acc;//端末の加速度
@@ -26,7 +26,6 @@ public class GetAcc : MonoBehaviour
         this.labelStyle = new GUIStyle();
         this.labelStyle.fontSize = Screen.height / 20;
         this.labelStyle.normal.textColor = Color.blue;
-		touchScript = touch.GetComponent<touch> ();
 
     }
 
@@ -41,7 +40,7 @@ public class GetAcc : MonoBehaviour
         float rd = Mathf.Atan2(-1.0f, 1.0f); //Mathf.Atan2(-Screen.height / 2.0f, Screen.width / 2.0f);
 
         float d = Mathf.Atan2(acc.y, acc.x);
-        
+        /*
 		if (ctrlCfg) {
 			ret = 3;
 			if (rd <= d && d < ru) {
@@ -61,12 +60,12 @@ public class GetAcc : MonoBehaviour
 			if (lastTouch == 3) { ret=2; }//上!!
 			if (lastTouch == 2) {ret=3; }//左!!
 		}
-		/*
+		*/
         if (Input.GetKeyDown(KeyCode.DownArrow)) { ret = 0; }
         if (Input.GetKeyDown(KeyCode.UpArrow)) { ret = 2; }
         if (Input.GetKeyDown(KeyCode.RightArrow)) { ret = 1; }
         if (Input.GetKeyDown(KeyCode.LeftArrow)) { ret = 3; }
-		*/
+		
     }
     //GUIこうしん(デバックじ以外はコメントアウトで)
     /* void OnGUI()

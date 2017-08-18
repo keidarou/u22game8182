@@ -15,7 +15,7 @@ public class share : MonoBehaviour
         Debug.Log("Sharing");
         Debug.Log(Application.persistentDataPath);
         // 画面をキャプチャ
-		Application.CaptureScreenshot("screenShot.png");
+		ScreenCapture.CaptureScreenshot("screenShot.png");
 
         // キャプチャを保存するので１フレーム待つ
         yield return new WaitForEndOfFrame();

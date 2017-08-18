@@ -28,7 +28,6 @@ public class timelimitandmemory : MonoBehaviour
     public void zenkaivoid()
     {
         clearcount++;
-        Debug.Log(clearcount);
     }
     //同じオブジェクトが何個も作られるのを防ぐ！！
     static timelimitandmemory _instance = null;

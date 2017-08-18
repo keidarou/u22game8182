@@ -6,6 +6,8 @@ public class inputfieldanimation : MonoBehaviour {
 
     [SerializeField]
     public Animator input;
+    public Animator toggle;
+    public GameObject toggleObj;
     //public GameObject leftbutton, rightbutton,
     public GameObject touch;
     public GameObject textfield;
@@ -15,8 +17,8 @@ public class inputfieldanimation : MonoBehaviour {
     {
         script = touch.GetComponent<touch>();
         input = textfield.GetComponent<Animator>();
-
         textfield.SetActive(false);
+        toggleObj.SetActive(false);
     }
 
     public int muki = 0;
@@ -25,20 +27,10 @@ public class inputfieldanimation : MonoBehaviour {
     public void animationend()
     {
         textfield.SetActive(false);
+        toggleObj.SetActive(false);
     }
-
-    void Update()
-    {
-        touchinfo = script.GetTouch();
-        if (touchinfo == 2)
-        {
-            rightchange();
-        }
-        if (touchinfo == 1)
-        {
-            leftchange();
-        }
-    }
+    public void rightt() { rightchange(); }
+    public void leftt() { leftchange(); }
 
     public void leftchange()
     {
@@ -51,19 +43,22 @@ public class inputfieldanimation : MonoBehaviour {
         {
             //rightbutton.SetActive(true);
             input.SetTrigger("Inputfieldout");
+            toggle.SetTrigger("toggleoutt");
             muki = 0;
         }
 
     }
     public void rightchange()
     {
-        Debug.Log("a");
         if (muki == 0)
         {
             muki = 1;
             //rightbutton.SetActive(false);
             textfield.SetActive(true);
             input.SetTrigger("Inputfieldstart");
+
+            toggleObj.SetActive(true);
+            toggle.SetTrigger("toggleinn");
         }
         if (muki == -1)
         {

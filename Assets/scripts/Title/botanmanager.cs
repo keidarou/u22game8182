@@ -28,8 +28,19 @@ public class botanmanager : MonoBehaviour
     {
         textfield.SetActive(false);
     }
-
-	void Update(){
+    public void rightt()
+    {
+        rightchange();
+    }
+    public void leftt()
+    {
+        leftchange();
+    }
+    public void mannnaka()
+    {
+        mannnakabutton();
+    }
+	/*void Update(){
 		touchinfo = script.GetTouch ();
 		if (touchinfo == 2) {
 			rightchange ();
@@ -40,7 +51,7 @@ public class botanmanager : MonoBehaviour
 		if (touchinfo == -1) {
 			mannnakabutton ();
 		}
-	}
+	}*/
 
 	public void leftchange(){
         if (muki == 0)

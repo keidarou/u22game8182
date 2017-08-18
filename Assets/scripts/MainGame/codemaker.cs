@@ -59,8 +59,8 @@ public class codemaker : MonoBehaviour
         code += "#";
         for (int i = 0; i < 2; i++)
         {
-            int y = goal.Pop();
             int x = goal.Pop();
+            int y = goal.Pop();
             y /= 2; x /= 2;
             code += rokujuuyonnlist[y * 13 + x];
         }
